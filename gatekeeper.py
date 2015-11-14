@@ -1,3 +1,5 @@
+import os
+
 from auth import server
 
 if __name__ == '__main__':
@@ -5,12 +7,14 @@ if __name__ == '__main__':
     print "Welcome to DMZ scanning code version: " + version
     iplist = []
     # Spin up server
+    print os.getcwd()
     server.app.run(
         host="0.0.0.0",
         port=int("8080"),
         debug=True
     )
     while True:
+        continue
 # Detect
 # iplist, newIps, lostIps) = dhcdetect.detect(iplist)
 # Scan
